@@ -17,6 +17,13 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('.tel-input').inputmask({
+        "mask": "+7 (999) 999-99-99"
+        , "placeholder": "_"
+        , showMaskOnHover: false
+        , showMaskOnFocus: true
+    });
+
     $('.reviews__wrap').slick({
         infinite: false,
         slidesToShow: 2,
@@ -27,7 +34,7 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="slick-next"></button>',
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1
                 }
@@ -35,10 +42,27 @@ $(document).ready(function() {
         ]
     });
 
-    $('.tel-input').inputmask({
-        "mask": "+7 (999) 999-99-99"
-        , "placeholder": "_"
-        , showMaskOnHover: false
-        , showMaskOnFocus: true
+    $('.services-slider').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 });
