@@ -1,0 +1,143 @@
+@import "layout/var";
+
+.header {
+  position: relative;
+
+  @media (max-width: $xs) {
+    padding-bottom: 20px;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+
+  &__logo {
+    padding: 12px 0;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-left: 20px;
+
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $xs) {
+      display: none;
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @media (max-width: $xs) {
+      display: block;
+      width: 20px;
+      position: absolute;
+      top: 40px;
+      right: 15px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: black;
+        margin: 3px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 22px;
+    color: $menuColor;
+    display: block;
+    margin: 0 15px;
+
+    @media (max-width: $md) {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+
+    @media (max-width: $xs) {
+      margin: 5px 10px;
+    }
+
+    &:hover,
+    &--active {
+      font-family: $mSemibold;
+    }
+  }
+
+  &__contacts {
+    width: 242px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    @media (max-width: $xs) {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    margin-left: 42px;
+    color: $menuColor;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  &__mes {
+    display: flex;
+    align-items: center;
+
+    a {
+      &:last-child {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__phone {
+    color: $menuColor;
+    font-family: $roboto;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    padding-left: 42px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url('../img/phone.svg') no-repeat center;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}

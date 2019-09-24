@@ -1,0 +1,257 @@
+@import "layout/var";
+
+.footer {
+  background: radial-gradient(867.95px at 54.49% 47.33%, #323642 0%, #14141B 100%);
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: $xs) {
+      justify-content: space-between;
+    }
+  }
+
+  // credits
+
+  &__credits {
+    margin: 21px 0 85px;
+
+    @media (max-width: $xs) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 12px;
+    display: flex;
+    color: $blue;
+    font-family: $mBlack;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  &__contacts {
+    margin-left: 0;
+  }
+
+  &__credit-block {
+    margin-top: 40px;
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+    }
+  }
+
+  &__text {
+    color: white;
+  }
+
+  &__phone {
+    color: white;
+
+    @media (max-width: $md) {
+      font-size: 20px;
+    }
+  }
+
+  &__address {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 37px;
+
+    @media (max-width: $md) {
+      font-size: 14px;
+      width: 245px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background: url('../img/footer_place.svg') no-repeat center;
+    }
+  }
+
+  // middle
+
+  &__middle {
+    margin-top: 24px;
+    margin-left: 124px;
+    margin-bottom: 10px;
+
+    @media (max-width: $md) {
+      margin-left: 65px;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: auto;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: 0;
+    }
+  }
+
+  &__menu-title {
+    color: white;
+    font-size: 24px;
+    line-height: 29px;
+    position: relative;
+    min-width: 148px;
+    padding-bottom: 10px;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 148px;
+      height: 3px;
+      background: $blue;
+      left: 0;
+      bottom: 0;
+
+      @media (max-width: $xs) {
+        width: 112px;
+      }
+    }
+  }
+
+  &__menu {
+    margin-top: 28px;
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+    }
+  }
+
+  &__menu-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    transition: 0.3s;
+    display: block;
+    margin: 0 0 16px;
+    break-inside: avoid;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  // right
+
+  &__right {
+    margin-top: 24px;
+    margin-left: 35px;
+    display: flex;
+
+    @media (max-width: $sm) {
+      margin-bottom: 26px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__insta {
+    margin-top: 43px;
+    margin-left: 70px;
+
+    @media (max-width: $md) {
+      margin-left: 50px;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: 100px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+    }
+  }
+
+  &__insta-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    font-family: $mSemibold;
+    transition: 0.3s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__insta-text {
+    display: block;
+    margin-top: 16px;
+
+    @media (max-width: $md) {
+      text-align: center;
+    }
+  }
+
+  // bottom
+
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      align-items: center;
+      padding: 9px 0;
+    }
+  }
+
+  &__bottom-link {
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 0 26px;
+    transition: 0.3s;
+
+    &:hover {
+      color: white;
+    }
+
+    @media (max-width: $xs) {
+      margin: 5px 0;
+      font-size: 12px;
+    }
+  }
+}
