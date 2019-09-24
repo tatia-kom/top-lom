@@ -12,6 +12,10 @@
     @media (max-width: $xs) {
       margin-top: 15px;
     }
+
+    &--small_top {
+      margin-top: 24px;
+    }
   }
 
   &__flex {

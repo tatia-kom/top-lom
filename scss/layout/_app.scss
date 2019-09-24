@@ -139,3 +139,47 @@ footer {
         }
     }
 }
+
+.breads {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    @media (max-width: $sm) {
+        margin-top: 30px;
+    }
+
+    @media (max-width: $xs) {
+        margin-top: 15px;
+    }
+
+    &__link {
+        color: black;
+        font-size: 12px;
+        line-height: 15px;
+        position: relative;
+        margin-right: 5px;
+
+        &:after {
+            content: " /";
+        }
+
+        &:hover {
+            color: $blue;
+
+            &:after {
+                color: black;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
