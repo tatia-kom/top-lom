@@ -1,0 +1,97 @@
+@import "layout/var";
+
+.what {
+  &--grey {
+    background: #f8f8f8;
+  }
+
+  &__flex {
+    padding-top: 16px;
+    display: flex;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: 175px;
+    flex-shrink: 0;
+    margin-right: 24px;
+
+    @media (max-width: $xs) {
+      align-self: center;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding-top: 25px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    font-family: $mSemibold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    margin-bottom: 16px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-size: 18px;
+      font-family: $mSemibold;
+      font-weight: normal;
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__button {
+    background: $blue;
+    //box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    padding: 15px 56px;
+    margin-left: auto;
+    transition: 0.2s linear;
+    cursor: pointer;
+
+    @media (max-width: $xs) {
+      padding: 10px;
+      width: 100%;
+    }
+
+    &:hover {
+      box-shadow: 201px 0 0 0 rgba(0,0,0,.3) inset;
+    }
+  }
+}
