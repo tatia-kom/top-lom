@@ -24,6 +24,21 @@ $(document).ready(function() {
         , showMaskOnFocus: true
     });
 
+    $('.open-modal').click(function(e) {
+        e.preventDefault();
+        $('body').addClass('modal-opened');
+        $('.modal').addClass('modal--opened');
+    });
+
+    $('.modal').click(function() {
+        $('.modal').removeClass('modal--opened');
+        $('body').removeClass('modal-opened');
+    });
+
+    $('.modal__block').click(function(e) {
+        e.stopPropagation();
+    });
+
     $('.reviews__wrap').slick({
         infinite: false,
         slidesToShow: 2,
