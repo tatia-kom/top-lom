@@ -413,11 +413,23 @@
 
     <div class="modal">
         <div class="modal__block">
-            <p class="modal__title">Расчет стоимости</p>
+            <p class="modal__title">Бесплатная оценка металлолома</p>
             <form class="modal__form">
-                <input type="text" placeholder="Введите имя" class="free__input modal__input">
-                <input type="text" placeholder="+7" class="free__phone tel-input modal__input modal__input--phone">
-                <button class="modal__button">Отправить заявку</button>
+                <div class="modal__input-wrap modal__input-wrap--phone">
+                    <input type="text" placeholder="Введите ваш номер телефона" class="free__input tel-input modal__input modal__input--no_border">
+                </div>
+                <div class="modal__input-wrap modal__input-wrap--email">
+                    <input type="text" placeholder="Введите ваше имя или почту" class="free__input modal__input modal__input--no_border">
+                </div>
+
+                <input type="text" placeholder="Тип лома" class="free__input modal__input">
+                <input type="text" placeholder="Объем лома" class="free__input modal__input">
+                <input type="text" placeholder="Где находится" class="free__input modal__input">
+
+                <input type="file" multiple="multiple" id="modal-files" class="modal__files">
+
+                <span class="free__file">Прикрепить файл</span>
+                <button class="modal__button">Отправить</button>
             </form>
         </div>
     </div>
