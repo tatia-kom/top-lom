@@ -66,15 +66,9 @@
     line-height: 22px;
     color: $menuColor;
     display: block;
-    margin: 0 15px;
 
     @media (max-width: $md) {
       font-size: 14px;
-      margin: 0 10px;
-    }
-
-    @media (max-width: $xs) {
-      margin: 5px 10px;
     }
 
     &:hover {
@@ -141,6 +135,83 @@
 
     &:hover {
       color: $blue;
+    }
+  }
+
+
+
+  // submenu
+
+  &__link-wrap {
+    position: relative;
+    padding: 0 15px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+      padding: 0 10px;
+    }
+
+    @media (max-width: $sm) {
+      height: auto;
+    }
+
+    @media (max-width: $xs) {
+      padding: 5px 10px;
+      display: block;
+    }
+
+    &:hover {
+      .header__submenu {
+        pointer-events: auto;
+        opacity: 1;
+
+        @media (max-width: $xs) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    background: white;
+    width: 170px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
+    left: 0;
+    top: calc(50% + 25px);
+    z-index: 10;
+    padding: 10px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+    @media (max-width: $sm) {
+      top: calc(50% + 15px);
+      padding: 5px 0;
+    }
+
+    @media (max-width: $xs) {
+      position: relative;
+      display: none;
+      opacity: 1;
+      pointer-events: auto;
+      box-shadow: none;
+    }
+
+    a {
+      color: black;
+      padding: 10px 15px;
+      display: block;
+
+      @media (max-width: $md) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
